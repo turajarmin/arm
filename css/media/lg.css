@@ -35,3 +35,37 @@ div.menu>nav>ul>li>a:hover{
 #close,#show,label[for=show],label[for=close]{
     display: none;
 }
+div.parallax{
+    width: 100%;
+    height: calc(100vh - 40px);
+    background: url('../../images/robotic.jpg') center center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+}
+div.parallax>div.slogan{
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(65, 207, 141, 0.5);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 5px 5px 25px black;
+    transition: 300ms;
+}
+div.parallax>div.slogan>h1{
+    color: #2b2b2b;
+    margin-bottom: 10px;
+    text-align: center;
+}
+div.parallax>div.slogan>p{
+    color: #2b2b2b;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-align: justify;
+    line-height: 20px;
+}
+div.parallax>div.slogan:hover{
+    backdrop-filter: blur(5px);
+}
