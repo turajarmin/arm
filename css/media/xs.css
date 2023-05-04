@@ -1,0 +1,86 @@
+div.menu{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    background-color: #2b2b2b;
+    transition: 300ms;
+}
+div.menu>nav{
+    width: inherit;
+}
+div.menu>nav>ul{
+    width: inherit;
+    text-align: center;
+}
+div.menu>nav>ul>li{
+    width: auto;
+}
+div.menu>nav>ul>li>a{
+    display: block;
+    width: inherit;
+    padding: 0 10px;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: whitesmoke;
+    font-weight: bold;
+    transition: 300ms;
+}
+div.menu>nav>ul>li>a:hover{
+    background-color: #4b4b4b;
+}
+#show,#close{
+    display: none;
+}
+label[for=show]{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+    background-color: #2b2b2b;
+    position: relative;
+    cursor: pointer;
+}
+label[for=show]>div{
+    width: 80%;
+    height: 2px;
+    background-color: deeppink;
+    position: absolute;
+}
+label[for=show]>div:nth-of-type(1){
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+label[for=show]>div:nth-of-type(2){
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+}
+label[for=show]>div:nth-of-type(3){
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%,-50%);
+}
+#show:checked ~ div.menu{
+    left: 0;
+}
+label[for=close]{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background-color: crimson;
+    text-align: center;
+    line-height: 30px;
+    color: whitesmoke;
+    font-size: 30px;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+#close:checked ~ div.menu{
+    left:-100%;
+}
